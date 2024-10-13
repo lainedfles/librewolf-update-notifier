@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Update Notifier</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <h1>Update Notifier</h1>
+    <img id="img_ok" class="hidden" alt="OK"
+         height="100" width="100" src="images/ok.svg"/>
+    <img id="img_warning" class="hidden" alt="WARNING"
+         height="100" width="100" src="images/warning.svg"/>
+    <img id="img_error" class="hidden" alt="ERROR"
+         height="100" width="100" src="images/error.svg"/>
+
+    <table>
+      <tr>
+        <th data-i18n-id="running_version">Currently Running Version</th>
+        <th data-i18n-id="available_version">Available Version</th>
+      </tr>
+      <tr>
+        <td id="local_version"></td>
+        <td id="remote_version"></td>
+      </tr>
+    </table>
+
+    <div id="info_links" class="hidden">
+      <h2 data-i18n-id="useful_links_headline">Useful links</h2>
+      <a href="https://www.mozilla.org/en-US/security/advisories/">Mozilla Security Advisories</a><br/>
+      <a href="https://www.mozilla.org/en-US/firefox/releases/">Firefox Release Notes</a>
+    </div>
+  </body>
+  <script src="../utils/storage.js"></script>
+  <script src="../utils/html-i18n.js"></script>
+  <script src="../versionchecker.js"></script>
+  <script src="main.js"></script>
+</html>

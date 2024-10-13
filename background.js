@@ -17,12 +17,13 @@
 */
 
 async function CheckForUpdates() {
-  console.log("START");
-  const response = await fetch("https://product-details.mozilla.org/1.0/firefox_versions.json");
-  const json = await response.json();
-  console.log(json);
+  if (! await VersionChecker.isUpToDate()) {
+    browser.tabs.create({
+      active: true,
+      url: browser.runtime.getURL("notification/message.html")
+    });
+  }
 }
 
 browser.runtime.onStartup.addListener(CheckForUpdates);
-
-CheckForUpdates(); // Only enable for debugging and development
+browser.runtime.onInstalled.addListener(CheckForUpdates);

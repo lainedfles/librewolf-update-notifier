@@ -4,10 +4,20 @@
 #
 
 FILES = manifest.json \
+        versionchecker.js \
         background.js \
+        default-preferences.json \
+        utils/storage.js \
+        utils/html-i18n.js \
+        utils/options.css \
+        options.html \
+        options.js \
         notification/message.html \
         notification/main.js \
         notification/main.css \
+        notification/images/error.svg \
+        notification/images/ok.svg \
+        notification/images/warning.svg \
         $(wildcard _locales/*/messages.json)
 
 ADDON = update-notifier

@@ -2,5 +2,39 @@
   "extensionDescription": {
     "message": "Know more quickly when a security update is due. Displays a warning if the browser version you are currently using is no longer up-to-date.",
     "description": "Description of the extension"
+  },
+
+  "updatechannel_headline": {
+    "message": "Update Channel",
+    "description": "Headline for the update channel section in options page"
+  },
+  "release_channel_label": {
+    "message": "Release",
+    "description": "Release channel radio button in options page"
+  },
+  "esr_channel_label": {
+    "message": "ESR (Extended Support Release)",
+    "description": "ESR channel radio button in options page"
+  },
+  "developer_channel_label": {
+    "message": "Developer Edition",
+    "description": "Developer Edition channel radio button in options page"
+  },
+  "beta_channel_label": {
+    "message": "Beta",
+    "description": "Beta channel radio button in options page"
+  },
+
+  "running_version": {
+    "message": "Currently Running Version",
+    "description": "Table header for the currently running version"
+  },
+  "available_version": {
+    "message": "Available Version",
+    "description": "Table header for the available version"
+  },
+  "useful_links_headline": {
+    "message": "Useful Links",
+    "description": "Headline for the link list"
   }
 }

@@ -1,0 +1,33 @@
+
+/* Color Schemes */
+:root {
+  --page-bg-color: #ffffff;
+  --page-fg-color: #000000;
+  --link-color: #0060ee;
+  --link-visited-color: #000099;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg-color: #1c1b22;
+    --page-fg-color: #fbfbfb;
+    --link-color: #00ddff;
+    --link-visited-color: #00eedd;
+  }
+}
+
+body {
+  background-color: var(--page-bg-color);
+  color: var(--page-fg-color);
+  font-family: sans;
+}
+a {
+  color: var(--link-color);
+}
+a:visited {
+  color: var(--link-visited-color);
+}
+
+.hidden {
+  display: none;
+}
