@@ -1,0 +1,6 @@
+{
+  "extensionDescription": {
+    "message": "Know more quickly when a security update is due. Displays a warning if the browser version you are currently using is no longer up-to-date.",
+    "description": "Description of the extension"
+  }
+}
