@@ -19,7 +19,7 @@
 body {
   background-color: var(--page-bg-color);
   color: var(--page-fg-color);
-  font-family: sans;
+  font-family: sans-serif;
 }
 a {
   color: var(--link-color);
