@@ -17,13 +17,18 @@
 */
 
 async function CheckForUpdates() {
-  if (! await VersionChecker.isUpToDate()) {
-    browser.tabs.create({
-      active: true,
-      url: browser.runtime.getURL("notification/message.html")
-    });
-  }
+  if (! await VersionChecker.isUpToDate())
+    OpenNotification();
 }
 
 browser.runtime.onStartup.addListener(CheckForUpdates);
 browser.runtime.onInstalled.addListener(CheckForUpdates);
+
+function OpenNotification() {
+  browser.tabs.create({
+    active: true,
+    url: browser.runtime.getURL("notification/message.html")
+  });
+}
+
+browser.browserAction.onClicked.addListener(OpenNotification);

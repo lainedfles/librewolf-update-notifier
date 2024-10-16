@@ -27,6 +27,8 @@
     "persistent": false
   },
 
+  "browser_action": {},
+
   "options_ui": {
     "page": "options.html"
   },
