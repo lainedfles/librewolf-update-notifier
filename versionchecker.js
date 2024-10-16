@@ -41,7 +41,7 @@ const VersionChecker = {
         else if (key == "LATEST_FIREFOX_VERSION")
           this.remoteVersions["release"].push(json[key]);
         else if (key.startsWith("FIREFOX_ESR") && json[key])
-          this.remoteVersions["esr"].push(json[key]);
+          this.remoteVersions["esr"].push(json[key].replace("esr", ""));
       }
     }
     catch(e) {
