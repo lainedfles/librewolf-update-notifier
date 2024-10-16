@@ -12,6 +12,12 @@
     }
   },
 
+  "icons": {
+    "24": "notification/images/warning.svg",
+    "48": "notification/images/warning.svg",
+    "96": "notification/images/warning.svg"
+  },
+
   "background": {
     "scripts": [
       "utils/storage.js",
