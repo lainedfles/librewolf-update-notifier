@@ -28,6 +28,10 @@ a:visited {
   color: var(--link-visited-color);
 }
 
+th, td {
+  padding: 2px 6px 2px 6px;
+}
+
 .hidden {
   display: none;
 }
