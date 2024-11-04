@@ -32,6 +32,10 @@ th, td {
   padding: 2px 6px 2px 6px;
 }
 
+.image_container {
+  height: 100px;
+  width: 100px;
+}
 .hidden {
   display: none;
 }
