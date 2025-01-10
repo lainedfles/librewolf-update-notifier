@@ -15,34 +15,26 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+/*
+    Librewolf addon "Librewolf Update Notifier"
+    Modified by Self Denial <selfdenial@pm.me>
+*/
 
 const VersionChecker = {
   isUpToDate: async function() {
     // Catch potential errors when working with the Mozilla API
     try {
       // Fetch remote version info
-      const response = await fetch("https://product-details.mozilla.org/1.0/firefox_versions.json");
+      const response = await fetch("https://gitlab.com/api/v4/projects/44042130/releases");
       const json = await response.json();
 
       // Prepare storage for the version information
       this.remoteVersions = {
-        "release": [],
-        "esr": [],
-        "developer": [],
-        "beta": []
+        "release": []
       }
 
       // Parse JSON response from the product details API
-      for (let key in json) {
-        if (key == "LATEST_FIREFOX_DEVEL_VERSION") {
-          this.remoteVersions["developer"].push(json[key]);
-          this.remoteVersions["beta"].push(json[key]);
-        }
-        else if (key == "LATEST_FIREFOX_VERSION")
-          this.remoteVersions["release"].push(json[key]);
-        else if (key.startsWith("FIREFOX_ESR") && json[key])
-          this.remoteVersions["esr"].push(json[key].replace("esr", ""));
-      }
+      this.remoteVersions["release"].push(json[0].tag_name);
     }
     catch(e) {
       this.error = e;
@@ -50,10 +42,7 @@ const VersionChecker = {
     }
     this.error = false;
 
-    // Get the version choices valid for the selected channel
-    const prefs = await Storage.get();
-    const channel = prefs.updatechannel;
-    this.remoteVersion = this.remoteVersions[channel];
+    this.remoteVersion = this.remoteVersions["release"];
 
     // Get the version of the currently running browser
     const info = await browser.runtime.getBrowserInfo();

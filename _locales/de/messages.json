@@ -4,27 +4,6 @@
     "description": "Description of the extension"
   },
 
-  "updatechannel_headline": {
-    "message": "Update Kanal",
-    "description": "Headline for the update channel section in options page"
-  },
-  "release_channel_label": {
-    "message": "Release",
-    "description": "Release channel radio button in options page"
-  },
-  "esr_channel_label": {
-    "message": "ESR (Extended Support Release)",
-    "description": "ESR channel radio button in options page"
-  },
-  "developer_channel_label": {
-    "message": "Developer Edition",
-    "description": "Developer Edition channel radio button in options page"
-  },
-  "beta_channel_label": {
-    "message": "Beta",
-    "description": "Beta channel radio button in options page"
-  },
-
   "running_version": {
     "message": "Aktuell laufende Version",
     "description": "Table header for the currently running version"

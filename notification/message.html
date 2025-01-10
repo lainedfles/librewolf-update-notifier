@@ -1,11 +1,11 @@
 <html>
   <head>
-    <title>Update Notifier</title>
+    <title>Librewolf Update Notifier</title>
     <link rel="stylesheet" type="text/css" href="main.css"/>
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
-    <h1>Update Notifier</h1>
+    <h1>Librewolf Update Notifier</h1>
     <div class="image_container">
       <img id="img_ok" class="hidden" alt="OK"
            height="100" width="100" src="images/ok.svg"/>
@@ -28,12 +28,14 @@
 
     <div id="info_links" class="hidden">
       <h2 data-i18n-id="useful_links_headline">Useful links</h2>
+      <a href="https://librewolf.net/">Librewolf Home</a>
+      <a href="https://codeberg.org/librewolf/source/releases">Librewolf Releases</a>
+      <br>
       <a href="https://www.mozilla.org/en-US/security/advisories/">Mozilla Security Advisories</a><br/>
       <a href="https://www.mozilla.org/en-US/firefox/releases/">Firefox Release Notes</a>
     </div>
 
-    <script src="../utils/storage.js"></script>
-    <script src="../utils/html-i18n.js"></script>
+    <script src="../html-i18n.js"></script>
     <script src="../versionchecker.js"></script>
     <script src="main.js"></script>
   </body>

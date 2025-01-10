@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "Update Notifier",
+  "name": "Librewolf Update Notifier",
   "version": "1.0.0",
 
   "description": "__MSG_extensionDescription__",
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "{6b70a8d5-8f8c-4aa8-b641-25eff07b3b83}",
+      "id": "{2ac35ed7-d42f-459e-9c34-edeef25dec08}",
       "strict_min_version": "115.0"
     }
   },
@@ -20,7 +20,6 @@
 
   "background": {
     "scripts": [
-      "utils/storage.js",
       "versionchecker.js",
       "background.js"
     ],
@@ -28,14 +27,6 @@
   },
 
   "browser_action": {},
-
-  "options_ui": {
-    "page": "options.html"
-  },
-
-  "permissions": [
-    "storage"
-  ],
 
   "default_locale": "en"
 }
