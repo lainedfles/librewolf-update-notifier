@@ -7,9 +7,7 @@ As a customized fork of the **Update Notifier** add-on (https://github.com/M-Rei
 
 The Add-on is available from Mozilla here: https://addons.mozilla.org/firefox/addon/librewolf-update-notifier/
 
-#### Development:
-
-Building:
+#### Development
 
 1. Use [make](https://www.gnu.org/software/make/) to build the XPI package:
    `make trunk`
