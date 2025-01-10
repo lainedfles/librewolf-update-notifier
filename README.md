@@ -1,14 +1,18 @@
-Update Notifier
-===============
+Librewolf Update Notifier
+=========================
 
-Main repository: https://github.com/lainedfles/librewolf-update-notifier.
+#### Get notified about new Librewolf releases
 
-Forked repository: https://github.com/M-Reimer/update-notifier.
+As a customized fork of the **Update Notifier** add-on (https://github.com/M-Reimer/update-notifier), this extension compares your current browser version with the latest release on the Librewolf Gitlab repository, keeping you informed about updates.
 
-AMO: https://addons.mozilla.org/firefox/addon/librewolf-update-notifier/
+The Add-on is available from Mozilla here: https://addons.mozilla.org/firefox/addon/librewolf-update-notifier/
 
-Localization: https://lusito.github.io/web-ext-translator/?gh=https://github.com/lainedfles/librewolf-update-notifier
+#### Development:
 
-Hacking: Do a [temporary install](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox).
+Building:
 
-Building: [make](https://www.gnu.org/software/make/)
+1. Use [make](https://www.gnu.org/software/make/) to build the XPI package:
+   `make trunk`
+   or
+   `make release`
+2. Test via a [temporary install](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
