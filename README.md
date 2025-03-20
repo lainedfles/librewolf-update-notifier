@@ -3,9 +3,9 @@ Librewolf Update Notifier
 
 #### Get notified about new Librewolf releases
 
-As a customized fork of the **Update Notifier** add-on (https://github.com/M-Reimer/update-notifier), this extension compares your current browser version with the latest release on the Librewolf Gitlab repository, keeping you informed about updates.
+As a customized fork of the **Update Notifier** [add-on](https://github.com/M-Reimer/update-notifier), this extension compares your current browser version with the latest release on the Librewolf Gitlab repository, keeping you informed about updates.
 
-The Add-on is available from Mozilla here: https://addons.mozilla.org/firefox/addon/librewolf-update-notifier/
+The Mozilla add-on is available from Mozilla [here](https://addons.mozilla.org/firefox/addon/librewolf-update-notifier)
 
 #### Development
 
