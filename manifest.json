@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Librewolf Update Notifier",
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "description": "__MSG_extensionDescription__",
 
@@ -13,9 +13,9 @@
   },
 
   "icons": {
-    "24": "notification/images/warning.svg",
-    "48": "notification/images/warning.svg",
-    "96": "notification/images/warning.svg"
+    "24": "notification/images/ok-icon.svg",
+    "48": "notification/images/ok-icon.svg",
+    "96": "notification/images/ok-icon.svg"
   },
 
   "background": {

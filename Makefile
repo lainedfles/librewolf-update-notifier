@@ -6,12 +6,13 @@
 FILES = manifest.json \
         versionchecker.js \
         background.js \
+        html-i18n.js \
         notification/message.html \
         notification/main.js \
         notification/main.css \
-        notification/images/error.svg \
-        notification/images/ok.svg \
-        notification/images/warning.svg \
+        notification/images/error-icon.svg \
+        notification/images/ok-icon.svg \
+        notification/images/warning-icon.svg \
         $(wildcard _locales/*/messages.json)
 
 ADDON = librewolf-update-notifier

@@ -8,11 +8,11 @@
     <h1>Librewolf Update Notifier</h1>
     <div class="image_container">
       <img id="img_ok" class="hidden" alt="OK"
-           height="100" width="100" src="images/ok.svg"/>
+           height="100" width="100" src="images/ok-icon.svg"/>
       <img id="img_warning" class="hidden" alt="WARNING"
-           height="100" width="100" src="images/warning.svg"/>
+           height="100" width="100" src="images/warning-icon.svg"/>
       <img id="img_error" class="hidden" alt="ERROR"
-           height="100" width="100" src="images/error.svg"/>
+           height="100" width="100" src="images/error-icon.svg"/>
     </div>
 
     <table>
@@ -26,14 +26,18 @@
       </tr>
     </table>
 
-    <div id="info_links" class="hidden">
-      <h2 data-i18n-id="useful_links_headline">Useful links</h2>
-      <a href="https://librewolf.net/">Librewolf Home</a>
-      <a href="https://codeberg.org/librewolf/source/releases">Librewolf Releases</a>
-      <br>
-      <a href="https://www.mozilla.org/en-US/security/advisories/">Mozilla Security Advisories</a><br/>
-      <a href="https://www.mozilla.org/en-US/firefox/releases/">Firefox Release Notes</a>
-    </div>
+    <p>
+      <details id="info_details">
+        <summary data-i18n-id="useful_links_headline"><b>Useful links</b></summary>
+        <div id="info_links">
+          <a href="https://librewolf.net/">Librewolf Home</a>
+          <a href="https://codeberg.org/librewolf/source/releases">Librewolf Releases</a>
+          <br>
+          <a href="https://www.mozilla.org/en-US/security/advisories/">Mozilla Security Advisories</a><br/>
+          <a href="https://www.mozilla.org/en-US/firefox/releases/">Firefox Release Notes</a>
+        </div>
+      </details>
+    </p>
 
     <script src="../html-i18n.js"></script>
     <script src="../versionchecker.js"></script>
