@@ -41,7 +41,6 @@ async function init() {
     });
     document.getElementById("img_ok").classList.remove("hidden");
     document.getElementById("remote_version").textContent = localVersion;
-    infoDetails.open = true;
   }
   else {
     if (VersionChecker.error) {

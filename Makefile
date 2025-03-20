@@ -13,6 +13,8 @@ FILES = manifest.json \
         notification/images/error-icon.svg \
         notification/images/ok-icon.svg \
         notification/images/warning-icon.svg \
+        notification/images/GitHub_Logo.png \
+        notification/images/github-mark.svg \
         $(wildcard _locales/*/messages.json)
 
 ADDON = librewolf-update-notifier

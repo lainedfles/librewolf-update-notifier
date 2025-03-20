@@ -2,7 +2,7 @@
   <head>
     <title>Librewolf Update Notifier</title>
     <link rel="stylesheet" type="text/css" href="main.css"/>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" charset="UTF-8">
   </head>
   <body>
     <h1>Librewolf Update Notifier</h1>
@@ -14,6 +14,8 @@
       <img id="img_error" class="hidden" alt="ERROR"
            height="100" width="100" src="images/error-icon.svg"/>
     </div>
+
+    <br>
 
     <table>
       <tr>
@@ -28,16 +30,30 @@
 
     <p>
       <details id="info_details">
-        <summary data-i18n-id="useful_links_headline"><b>Useful links</b></summary>
+        <summary data-i18n-id="useful_links_headline">🌐 Useful links</summary>
         <div id="info_links">
-          <a href="https://librewolf.net/">Librewolf Home</a>
-          <a href="https://codeberg.org/librewolf/source/releases">Librewolf Releases</a>
-          <br>
-          <a href="https://www.mozilla.org/en-US/security/advisories/">Mozilla Security Advisories</a><br/>
-          <a href="https://www.mozilla.org/en-US/firefox/releases/">Firefox Release Notes</a>
+          <table>
+            <tr>
+              <td><a href="https://librewolf.net/">Librewolf Home</a></td>
+              <td><a href="https://codeberg.org/librewolf/source/releases">Librewolf Releases</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.mozilla.org/en-US/security/advisories/">Mozilla Security Advisories</a></td>
+              <td><a href="https://www.mozilla.org/en-US/firefox/releases/">Firefox Release Notes</a></td>
+            </tr>
+          </table>
         </div>
       </details>
     </p>
+
+    <div id="small_image_container">
+      <p>
+        <a href="https://github.com/lainedfles/librewolf-update-notifier" target="_blank">
+          <img id="small_image" src="images/github-mark.svg" alt="GitHub icon">
+          <img id="small_image" src="images/GitHub_Logo.png" alt="GitHub logo">
+        </a>
+      </p>
+    </div>
 
     <script src="../html-i18n.js"></script>
     <script src="../versionchecker.js"></script>

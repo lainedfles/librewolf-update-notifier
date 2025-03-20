@@ -34,7 +34,11 @@ th, td {
 
 .image_container {
   height: 100px;
-  width: 100px;
+  width: auto;
+}
+
+#small_image {
+  max-height: 24px !important;
 }
 .hidden {
   display: none;
