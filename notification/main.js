@@ -34,8 +34,11 @@ async function init() {
   if (await VersionChecker.isUpToDate()) {
     browser.browserAction.setIcon({
       path: {
+        "16": "images/ok-icon.svg",
         "24": "images/ok-icon.svg",
+        "32": "images/ok-icon.svg",
         "48": "images/ok-icon.svg",
+        "64": "images/ok-icon.svg",
         "96": "images/ok-icon.svg"
       },
     });
@@ -46,22 +49,28 @@ async function init() {
     if (VersionChecker.error) {
       alert(VersionChecker.error);
       browser.browserAction.setIcon({
-        path: {
-          "24": "images/error-icon.svg",
-          "48": "images/error-icon.svg",
-          "96": "images/error-icon.svg"
-        },
+      path: {
+        "16": "images/error-icon.svg",
+        "24": "images/error-icon.svg",
+        "32": "images/error-icon.svg",
+        "48": "images/error-icon.svg",
+        "64": "images/error-icon.svg",
+        "96": "images/error-icon.svg"
+      },
       });
       document.getElementById("img_error").classList.remove("hidden");
       infoDetails.open = true;
     }
     else {
       browser.browserAction.setIcon({
-        path: {
-          "24": "images/warning-icon.svg",
-          "48": "images/warning-icon.svg",
-          "96": "images/warning-icon.svg"
-        },
+      path: {
+        "16": "images/warning-icon.svg",
+        "24": "images/warning-icon.svg",
+        "32": "images/warning-icon.svg",
+        "48": "images/warning-icon.svg",
+        "64": "images/warning-icon.svg",
+        "96": "images/warning-icon.svg"
+      },
       });
       document.getElementById("img_warning").classList.remove("hidden");
       document.getElementById("remote_version").textContent = VersionChecker.remoteVersion.join(", ");
