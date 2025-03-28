@@ -77,6 +77,14 @@ async function init() {
       infoDetails.open = true;
     }
   }
+
+  // Add menu
+  browser.menus.create({
+    id: 'open_options',
+    title: 'Open Settings',
+    icons: { '16': 'notification/images/ok-icon.svg' },
+    contexts: ['browser_action'],
+  });
 }
 
 init();

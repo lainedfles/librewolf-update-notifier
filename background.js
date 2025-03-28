@@ -15,20 +15,56 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+/*
+    Librewolf addon "Librewolf Update Notifier"
+    Modified by Self Denial <selfdenial@pm.me>
+*/
 
 async function CheckForUpdates() {
   if (! await VersionChecker.isUpToDate())
-    OpenNotification();
+    OpenNotification(false);
 }
 
 browser.runtime.onStartup.addListener(CheckForUpdates);
 browser.runtime.onInstalled.addListener(CheckForUpdates);
 
-function OpenNotification() {
-  browser.tabs.create({
-    active: true,
-    url: browser.runtime.getURL("notification/message.html")
-  });
+async function OpenNotification(clicked = true) {
+  let res;
+  try {
+    res = await browser.storage.managed.get('notiftype');
+  } catch (error) {
+    console.error(error);
+  }
+  if (typeof res === 'undefined') {
+    res = await browser.storage.sync.get('notiftype');
+  }
+  if (res.notiftype === 'popup' || res.notiftype === 'both' || clicked !== false) {
+    browser.tabs.create({
+      active: true,
+      url: browser.runtime.getURL("notification/message.html")
+    });
+  }
+  if (res.notiftype === 'notif' || res.notiftype === 'both') {
+    let msg = 'New version available!';
+    let icon = browser.extension.getURL("notification/images/warning-icon.svg")
+    if (VersionChecker.error) {
+      msg = 'Error checking update!'
+      icon = browser.extension.getURL("notification/images/error-icon.svg")
+    }
+    browser.notifications.create({
+      type: "basic",
+      iconUrl: icon,
+      title: 'Librewolf Update Notifier',
+      message: msg,
+    });
+  }
 }
 
 browser.browserAction.onClicked.addListener(OpenNotification);
+browser.menus.onClicked.addListener((info, tab) => {
+  switch (info.menuItemId) {
+    case "open_options":
+      browser.runtime.openOptionsPage();
+      break;
+  }
+});
