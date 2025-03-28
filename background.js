@@ -44,7 +44,7 @@ async function OpenNotification(clicked = true) {
       url: browser.runtime.getURL("notification/message.html")
     });
   }
-  if (res.notiftype === 'notif' || res.notiftype === 'both') {
+  if ((res.notiftype === 'notif' || res.notiftype === 'both') && clicked == false) {
     let msg = 'New version available!';
     let icon = browser.extension.getURL("notification/images/warning-icon.svg")
     if (VersionChecker.error) {
