@@ -21,8 +21,8 @@
 
     <table>
       <tr>
-        <th data-i18n-id="running_version">Currently Running Version</th>
-        <th data-i18n-id="available_version">Available Version</th>
+        <th data-i18n-id="runningVersion">Currently Running Version</th>
+        <th data-i18n-id="availableVersion">Available Version</th>
       </tr>
       <tr>
         <td id="local_version"></td>
@@ -32,30 +32,33 @@
 
     <p>
       <details id="info_details">
-        <summary data-i18n-id="useful_links_headline">🌐 Useful links</summary>
+        <summary data-i18n-id="usefulLinksHeadline">🔗 Useful links</summary>
 	      <br>
         <div id="info_links">
           <table>
             <tr>
-              <td><a href="https://librewolf.net/" target="_blank">Librewolf Home</a></td>
-              <td><a href="https://codeberg.org/librewolf/source/releases" target="_blank">Librewolf Releases</a></td>
+              <td><a href="https://librewolf.net/" target="_blank" data-i18n-id="usefulLinksLibrewolfHome">Librewolf Home</a></td>
+              <td><a href="https://codeberg.org/librewolf/source/releases" target="_blank" data-i18n-id="usefulLinksLibrewolfReleases">Librewolf Releases</a></td>
             </tr>
             <tr>
-              <td><a href="https://www.mozilla.org/en-US/security/advisories/" target="_blank">Mozilla Security Advisories</a></td>
-              <td><a href="https://www.mozilla.org/en-US/firefox/releases/" target="_blank">Firefox Release Notes</a></td>
+              <td><a href="https://www.mozilla.org/en-US/security/advisories/" target="_blank" data-i18n-id="usefulLinksMozillaAdvisories">Mozilla Security Advisories</a></td>
+              <td><a href="https://www.mozilla.org/en-US/firefox/releases/" target="_blank" data-i18n-id="usefulLinksFirefoxNotes">Firefox Release Notes</a></td>
             </tr>
           </table>
         </div>
       </details>
     </p>
 
-    <div id="small_image_container">
-      <p>
-        <a href="https://github.com/lainedfles/librewolf-update-notifier" target="_blank">
-          <img id="small_image" src="images/github-mark.svg" alt="GitHub icon">
-          <img id="small_image" src="images/GitHub_Logo.png" alt="GitHub logo">
-        </a>
-      </p>
+    <div id="footer_container">
+      <table>
+        <tr>
+          <td id="open_settings_page" data-i18n-id="openOptionsPageLink">⚙ Options</td>
+          <td><a href="https://github.com/lainedfles/librewolf-update-notifier" target="_blank">
+            <img id="small_image" src="images/github-mark.svg" alt="GitHub icon">
+            <img id="small_image" src="images/GitHub_Logo.png" alt="GitHub logo">
+          </a></td>
+        </tr>
+      </table>
     </div>
 
     <script src="../html-i18n.js"></script>

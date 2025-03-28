@@ -1,0 +1,8 @@
+div {
+  margin: 25px;
+}
+
+#managed-options {
+  display: none;
+  background-color: #FF0000;
+}

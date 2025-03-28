@@ -39,7 +39,8 @@ async function init() {
         "32": "images/ok-icon.svg",
         "48": "images/ok-icon.svg",
         "64": "images/ok-icon.svg",
-        "96": "images/ok-icon.svg"
+        "96": "images/ok-icon.svg",
+        "128": "images/ok-icon.svg"
       },
     });
     document.getElementById("img_ok").classList.remove("hidden");
@@ -55,7 +56,8 @@ async function init() {
         "32": "images/error-icon.svg",
         "48": "images/error-icon.svg",
         "64": "images/error-icon.svg",
-        "96": "images/error-icon.svg"
+        "96": "images/error-icon.svg",
+        "128": "images/error-icon.svg"
       },
       });
       document.getElementById("img_error").classList.remove("hidden");
@@ -69,7 +71,8 @@ async function init() {
         "32": "images/warning-icon.svg",
         "48": "images/warning-icon.svg",
         "64": "images/warning-icon.svg",
-        "96": "images/warning-icon.svg"
+        "96": "images/warning-icon.svg",
+        "128": "images/warning-icon.svg"
       },
       });
       document.getElementById("img_warning").classList.remove("hidden");
@@ -79,12 +82,19 @@ async function init() {
   }
 
   // Add menu
+  let title = browser.i18n.getMessage("menuOpenSettings");
   browser.menus.create({
     id: 'open_options',
-    title: 'Open Settings',
+    title: title,
     icons: { '16': 'notification/images/ok-icon.svg' },
     contexts: ['browser_action'],
   });
 }
 
 init();
+
+function mainopenOptionsPage() {
+  browser.runtime.openOptionsPage();
+}
+
+document.querySelector("#open_settings_page").addEventListener("click", mainopenOptionsPage);

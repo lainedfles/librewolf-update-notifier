@@ -1,19 +1,84 @@
 {
+  "extensionName": {
+    "message": "Librewolf Update Notifier",
+    "description": "Name of the extension."
+  },
   "extensionDescription": {
     "message": "Stay ahead of security risks with timely updates. This Add-on alerts you when your current Librewolf browser version is outdated, ensuring you're always protected with the latest security patches.",
     "description": "Description of the extension"
   },
-
-  "running_version": {
+  "runningVersion": {
     "message": "Currently Running Version",
     "description": "Table header for the currently running version"
   },
-  "available_version": {
+  "availableVersion": {
     "message": "Available Version",
     "description": "Table header for the available version"
   },
-  "useful_links_headline": {
-    "message": "🌐 Useful Links",
+  "usefulLinksHeadline": {
+    "message": "🔗 Useful Links",
     "description": "Headline for the link list"
-  }
+  },
+  "notificationContentWarn": {
+    "message": "New version available!",
+    "description": "Warning notification message"
+  },
+  "notificationContentErr": {
+    "message": "Error checking update!",
+    "description": "Error notification message"
+  },
+  "menuOpenSettings": {
+    "message": "Open Settings",
+    "description": "Open Settings menu text"
+  },
+  "managedOptionsWarning": {
+    "message": "Extension settings are enforced by an administrator.",
+    "description": "Warning text for managed-options enforcement"
+  },
+  "optionsNotifType": {
+    "message": "Notification Type",
+    "description": "Options Notification Type text"
+  },
+  "optionsPopup": {
+    "message": "Pop-up",
+    "description": "Options Pop-up text"
+  },
+  "optionsNotif": {
+    "message": "Notification",
+    "description": "Options Notification text"
+  },
+  "optionsBoth": {
+    "message": "Both",
+    "description": "Options Both text"
+  },
+  "optionsDisabled": {
+    "message": "Disabled",
+    "description": "Options Disabled text"
+  },
+  "optionsSave": {
+    "message": "Save",
+    "description": "Options Save button text"
+  },
+  "usefulLinksLibrewolfHome": {
+    "message": "Librewolf Home",
+    "description": "Options Librewolf Home link text"
+  },
+  "usefulLinksLibrewolfReleases": {
+    "message": "Librewolf Releases",
+    "description": "Options Librewolf Releases link text"
+  },
+  "usefulLinksMozillaAdvisories": {
+    "message": "Mozilla Security Advisories",
+    "description": "Options Mozilla Security Advisories link text"
+  },
+  "usefulLinksFirefoxNotes": {
+    "message": "Firefox Release Notes",
+    "description": "Options Firefox Release Notes link text"
+  },
+  "openOptionsPageLink": {
+    "message": "⚙ Options",
+    "description": "Open options page text"
+  },
+
+  "__WET_LOCALE__": { "message": "en" }
 }

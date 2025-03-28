@@ -1,19 +1,104 @@
 {
+  "extensionName": {
+    "message": "Librewolf Update Notifier",
+    "description": "Name of the extension.",
+    "hash": "c7de786e97aa4d9ef305b4e40da9ba23"
+  },
   "extensionDescription": {
-    "message": "Bleiben Sie mit rechtzeitigen Updates vor Sicherheitsrisiken geschützt. Dieses Add-on warnt Sie, wenn Ihre aktuelle Librewolf-Browser-Version veraltet ist, und stellt sicher, dass Sie immer mit den neuesten Sicherheitsupdates geschützt sind.",
-    "description": "Description of the extension"
+    "message": "Bleiben Sie vor Sicherheitsrisiken mit rechtzeitigen Updates. Dieses Add-on alarmiert Sie, wenn Ihre aktuelle Librewolf Browser-Version veraltet ist, so dass Sie immer mit den neuesten Sicherheits-Patches geschützt sind.",
+    "description": "Description of the extension",
+    "hash": "eb733aaf8f903dbb197ea323952cc3e9"
+  },
+  "runningVersion": {
+    "message": "Aktuell laufende Version",
+    "description": "Table header for the currently running version",
+    "hash": "7e74fd70c34a1bf0b472989873ade861"
+  },
+  "availableVersion": {
+    "message": "Verfügbare Version",
+    "description": "Table header for the available version",
+    "hash": "bd8c11733150fe436bdda0a6c2b28f16"
+  },
+  "usefulLinksHeadline": {
+    "message": "🔗 Nützliche Links",
+    "description": "Headline for the link list",
+    "hash": "9af65d99244fd16243f069a3cc105c7e"
+  },
+  "notificationContentWarn": {
+    "message": "Neue Version verfügbar!",
+    "description": "Warning notification message",
+    "hash": "db98ed3440b884789cfdf287f2884b66"
+  },
+  "notificationContentErr": {
+    "message": "Fehlersuche aktualisieren!",
+    "description": "Error notification message",
+    "hash": "75a0226200636b59d5922f94eab9340c"
+  },
+  "menuOpenSettings": {
+    "message": "Offene Einstellungen",
+    "description": "Open Settings menu text",
+    "hash": "f4d618383d49eeaf4f2ccee8fc851fcf"
+  },
+  "managedOptionsWarning": {
+    "message": "Erweiterungseinstellungen werden von einem Administrator durchgesetzt.",
+    "description": "Warning text for managed-options enforcement",
+    "hash": "da34b67b50e24672a128901941e25bd6"
+  },
+  "optionsNotifType": {
+    "message": "Bezeichnung",
+    "description": "Options Notification Type text",
+    "hash": "84f21868eaff68a1fa564d5d11ea4c31"
+  },
+  "optionsPopup": {
+    "message": "Pop-up",
+    "description": "Options Pop-up text",
+    "hash": "2b75799ff2ccee4c5a76ab4c4fb9911d"
+  },
+  "optionsNotif": {
+    "message": "Notifizierung",
+    "description": "Options Notification text",
+    "hash": "1f4a7c80d34c00382eeded67594e2b1b"
+  },
+  "optionsBoth": {
+    "message": "Beide",
+    "description": "Options Both text",
+    "hash": "8c1b5a71963ec88b01c9f389434c8db7"
+  },
+  "optionsDisabled": {
+    "message": "Behinderte",
+    "description": "Options Disabled text",
+    "hash": "624dcfb216e1ef66dcac7893dbe10821"
+  },
+  "optionsSave": {
+    "message": "Speichern",
+    "description": "Options Save button text",
+    "hash": "aa14043bd4e6f79db542868539be9220"
+  },
+  "usefulLinksLibrewolfHome": {
+    "message": "Librewolf Home",
+    "description": "Options Librewolf Home link text",
+    "hash": "77dca36d202c59edc969a9f30b72055b"
+  },
+  "usefulLinksLibrewolfReleases": {
+    "message": "Librewolf veröffentlicht",
+    "description": "Options Librewolf Releases link text",
+    "hash": "cf92806df4291e20026b63e049b6c9b2"
+  },
+  "usefulLinksMozillaAdvisories": {
+    "message": "Mozilla Sicherheitsberater",
+    "description": "Options Mozilla Security Advisories link text",
+    "hash": "5772f3b5f4a9fe1ec1e0fe1b16590f3d"
+  },
+  "usefulLinksFirefoxNotes": {
+    "message": "Firefox Release Notes",
+    "description": "Options Firefox Release Notes link text",
+    "hash": "87efbc3a35f40b27db8034bf132c048a"
+  },
+  "openOptionsPageLink": {
+    "message": "⚙ Optionen",
+    "description": "Open options page text",
+    "hash": "08462bd395b4ff3b5bc19545dddb7cd1"
   },
 
-  "running_version": {
-    "message": "Aktuell laufende Version",
-    "description": "Table header for the currently running version"
-  },
-  "available_version": {
-    "message": "Verfügbare Version",
-    "description": "Table header for the available version"
-  },
-  "useful_links_headline": {
-    "message": "🌐 Nützliche Links",
-    "description": "Headline for the link list"
-  }
+  "__WET_LOCALE__": { "message": "de" }
 }

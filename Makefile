@@ -7,8 +7,9 @@ FILES = manifest.json \
         versionchecker.js \
         background.js \
         html-i18n.js \
-        options.html \
-        options.js \
+        options/options.html \
+        options/options.js \
+        options/options.css \
         notification/message.html \
         notification/main.js \
         notification/main.css \

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="dark light">
+    <link rel="stylesheet" type="text/css" href="options.css"/>
+  </head>
+
+<body>
+  <div>
+    <p id="managed-options"><b data-i18n-id="managedOptionsWarning">Extension settings are enforced by an administrator.</b></p>
+    <form>
+      <label for="notif-type"><b data-i18n-id="optionsNotifType">Notification Type</b></label>
+      <select id="notif-type">
+        <option value="popup" data-i18n-id="optionsPopup">Pop-up</option> 
+        <option value="notif" data-i18n-id="optionsNotif">Notification</option>
+        <option value="both" data-i18n-id="optionsBoth" selected>Both</option>
+        <option value="disabled" data-i18n-id="optionsDisabled">Disabled</option>
+      </select>
+      <button type="submit" id="submit-button" data-i18n-id="optionsSave">Save</button>
+    </form>
+  </div>
+
+  <script src="../html-i18n.js"></script>
+  <script src="options.js"></script>
+</body>
+
+</html>

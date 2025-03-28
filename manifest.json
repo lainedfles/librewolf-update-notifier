@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Librewolf Update Notifier",
-  "version": "1.0.4",
+  "name": "__MSG_extensionName__",
+  "version": "1.0.5",
 
   "description": "__MSG_extensionDescription__",
 
@@ -13,9 +13,13 @@
   },
 
   "icons": {
+    "16": "notification/images/ok-icon.svg",
     "24": "notification/images/ok-icon.svg",
+    "32": "notification/images/ok-icon.svg",
     "48": "notification/images/ok-icon.svg",
-    "96": "notification/images/ok-icon.svg"
+    "64": "notification/images/ok-icon.svg",
+    "96": "notification/images/ok-icon.svg",
+    "128": "notification/images/ok-icon.svg"
   },
 
   "background": {
@@ -31,7 +35,7 @@
   "permissions": ["storage", "menus", "notifications"],
 
   "options_ui": {
-    "page": "options.html"
+    "page": "options/options.html"
   },
 
   "default_locale": "en"

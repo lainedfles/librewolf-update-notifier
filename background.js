@@ -45,17 +45,18 @@ async function OpenNotification(clicked = true) {
     });
   }
   if ((res.notiftype === 'notif' || res.notiftype === 'both') && clicked == false) {
-    let msg = 'New version available!';
-    let icon = browser.extension.getURL("notification/images/warning-icon.svg")
+    let title = browser.i18n.getMessage("extensionName");
+    let msg = browser.i18n.getMessage("notificationContentWarn");
+    let icon = browser.extension.getURL("notification/images/warning-icon.svg");
     if (VersionChecker.error) {
-      msg = 'Error checking update!'
-      icon = browser.extension.getURL("notification/images/error-icon.svg")
+      msg = browser.i18n.getMessage("notificationContentErr");
+      icon = browser.extension.getURL("notification/images/error-icon.svg");
     }
     browser.notifications.create({
       type: "basic",
       iconUrl: icon,
-      title: 'Librewolf Update Notifier',
-      message: msg,
+      title: title,
+      message: msg
     });
   }
 }
