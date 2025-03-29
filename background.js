@@ -47,10 +47,10 @@ async function OpenNotification(clicked = true) {
   if ((res.notiftype === 'notif' || res.notiftype === 'both') && clicked == false) {
     let title = browser.i18n.getMessage("extensionName");
     let msg = browser.i18n.getMessage("notificationContentWarn");
-    let icon = browser.extension.getURL("notification/images/warning-icon.svg");
+    let icon = browser.runtime.getURL("notification/images/warning-icon.svg");
     if (VersionChecker.error) {
       msg = browser.i18n.getMessage("notificationContentErr");
-      icon = browser.extension.getURL("notification/images/error-icon.svg");
+      icon = browser.runtime.getURL("notification/images/error-icon.svg");
     }
     browser.notifications.create({
       type: "basic",
