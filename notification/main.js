@@ -82,10 +82,9 @@ async function init() {
   }
 
   // Add menu
-  let title = browser.i18n.getMessage("menuOpenSettings");
   browser.menus.create({
     id: 'open_options',
-    title: title,
+    title: browser.i18n.getMessage("menuOpenSettings"),
     icons: { '16': 'notification/images/ok-icon.svg' },
     contexts: ['browser_action'],
   });

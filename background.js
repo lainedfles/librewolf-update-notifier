@@ -62,10 +62,25 @@ async function OpenNotification(clicked = true) {
 }
 
 browser.browserAction.onClicked.addListener(OpenNotification);
-browser.menus.onClicked.addListener((info, tab) => {
+browser.menus.onClicked.addListener((info) => {
   switch (info.menuItemId) {
     case "open_options":
       browser.runtime.openOptionsPage();
       break;
   }
+});
+
+function updateMenuItem(id, title) {
+  browser.menus.update(id, {
+    title: title,
+  });
+  browser.menus.refresh();
+}
+
+browser.menus.onShown.addListener((info) => {
+  let id = 'open_options'
+  if (!info.menuIds.includes(id)) {
+    return;
+  }
+  updateMenuItem(id, browser.i18n.getMessage("menuOpenSettings"));
 });
