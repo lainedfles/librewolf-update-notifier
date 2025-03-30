@@ -92,5 +92,6 @@ function mainopenOptionsPage() {
 document.getElementById("open_settings_page").addEventListener("click", mainopenOptionsPage);
 
 // Match info_table & footer_table to version_table
-document.getElementById("info_table").style.width = `${document.getElementById("version_table").offsetWidth}px`;
-document.getElementById("footer_table").style.width = `${document.getElementById("version_table").offsetWidth}px`;
+const versionTableWidth = document.getElementById("version_table").offsetWidth || 420;
+document.getElementById("info_table").style.width = `${versionTableWidth}px`;
+document.getElementById("footer_table").style.width = `${versionTableWidth}px`;
