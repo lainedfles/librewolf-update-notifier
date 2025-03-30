@@ -1,0 +1,134 @@
+{
+  "extensionName": {
+    "message": "Librewolf 更新通知符",
+    "description": "Name of the extension.",
+    "hash": "c7de786e97aa4d9ef305b4e40da9ba23"
+  },
+  "extensionDescription": {
+    "message": "及时更新安全风险。 当当前 Librewolf 浏览器版本已过时时, 此添加提醒您, 确保您总是被最新的安全补丁保护 。",
+    "description": "Description of the extension",
+    "hash": "eb733aaf8f903dbb197ea323952cc3e9"
+  },
+  "runningVersion": {
+    "message": "当前运行的版本",
+    "description": "Table header for the currently running version",
+    "hash": "7e74fd70c34a1bf0b472989873ade861"
+  },
+  "availableVersion": {
+    "message": "可用版本",
+    "description": "Table header for the available version",
+    "hash": "bd8c11733150fe436bdda0a6c2b28f16"
+  },
+  "usefulLinksHeadline": {
+    "message": "有用链接",
+    "description": "Headline for the link list",
+    "hash": "5e3ef05f2a53de266be007e083bba415"
+  },
+  "notificationContentWarn": {
+    "message": "新版本可用!",
+    "description": "Warning notification message",
+    "hash": "db98ed3440b884789cfdf287f2884b66"
+  },
+  "notificationContentErr": {
+    "message": "检查更新出错 !",
+    "description": "Error notification message",
+    "hash": "75a0226200636b59d5922f94eab9340c"
+  },
+  "menuOpenSettings": {
+    "message": "打开设置",
+    "description": "Open Settings menu text",
+    "hash": "f4d618383d49eeaf4f2ccee8fc851fcf"
+  },
+  "managedOptionsWarning": {
+    "message": "扩展设置由管理员执行 。",
+    "description": "Warning text for managed-options enforcement",
+    "hash": "da34b67b50e24672a128901941e25bd6"
+  },
+  "optionsNotifType": {
+    "message": "通知类型",
+    "description": "Options Notification type text",
+    "hash": "749864bd53dc240f00389e7558ae60b0"
+  },
+  "optionsPopup": {
+    "message": "弹出",
+    "description": "Options Pop-up text",
+    "hash": "2b75799ff2ccee4c5a76ab4c4fb9911d"
+  },
+  "optionsNotif": {
+    "message": "通知",
+    "description": "Options Notification text",
+    "hash": "1f4a7c80d34c00382eeded67594e2b1b"
+  },
+  "optionsBoth": {
+    "message": "两者",
+    "description": "Options Both text",
+    "hash": "8c1b5a71963ec88b01c9f389434c8db7"
+  },
+  "optionsDisabled": {
+    "message": "已禁用",
+    "description": "Options Disabled text",
+    "hash": "624dcfb216e1ef66dcac7893dbe10821"
+  },
+  "optionsSave": {
+    "message": "保存",
+    "description": "Options Save button text",
+    "hash": "aa14043bd4e6f79db542868539be9220"
+  },
+  "usefulLinksLibrewolfHome": {
+    "message": "自由狼之家",
+    "description": "Options Librewolf Home link text",
+    "hash": "77dca36d202c59edc969a9f30b72055b"
+  },
+  "usefulLinksLibrewolfReleases": {
+    "message": "自由狼释放",
+    "description": "Options Librewolf Releases link text",
+    "hash": "cf92806df4291e20026b63e049b6c9b2"
+  },
+  "usefulLinksMozillaAdvisories": {
+    "message": "Mozilla安全顾问",
+    "description": "Options Mozilla Security Advisories link text",
+    "hash": "5772f3b5f4a9fe1ec1e0fe1b16590f3d"
+  },
+  "usefulLinksFirefoxNotes": {
+    "message": "Firefox 释放注释",
+    "description": "Options Firefox Release Notes link text",
+    "hash": "87efbc3a35f40b27db8034bf132c048a"
+  },
+  "openOptionsPageLink": {
+    "message": "⚙ 选项",
+    "description": "Open options page text",
+    "hash": "08462bd395b4ff3b5bc19545dddb7cd1"
+  },
+  "optionsAlarmTimer": {
+    "message": "检查是否有更新",
+    "description": "Options Check for updates every text",
+    "hash": "59f1dfadb7dccf42eadaf0ba0edb57e5"
+  },
+  "options4Hours": {
+    "message": "4 小时",
+    "description": "Options Alarm 4 Hours text",
+    "hash": "4a0c7fb97546cbac76fd9e86f879b29f"
+  },
+  "options8Hours": {
+    "message": "8小时",
+    "description": "Options Alarm 8 Hours text",
+    "hash": "f189ea0653a0919cf021ebe3dd72ba22"
+  },
+  "options12Hours": {
+    "message": "12小时",
+    "description": "Options Alarm 12 hours text",
+    "hash": "39d3691793f58e2669767cab5e4c5e69"
+  },
+  "options24Hours": {
+    "message": "24小时",
+    "description": "Options Alarm 24 Hours text",
+    "hash": "f8bda66757b048b975bfdeb3ba5aa75d"
+  },
+  "optionsReset": {
+    "message": "重置默认值",
+    "description": "Options Reset Defaults button text",
+    "hash": "1a5887eeed3cd8e9e25fe8eb5e3b580e"
+  },
+
+  "__WET_LOCALE__": { "message": "chi" }
+}
