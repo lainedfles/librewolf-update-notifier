@@ -6,6 +6,7 @@
 FILES = manifest.json \
         versionchecker.js \
         background.js \
+        updatealarm.js \
         html-i18n.js \
         options/options.html \
         options/options.js \

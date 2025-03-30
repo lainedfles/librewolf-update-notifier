@@ -27,7 +27,7 @@ async function init() {
   document.getElementById("local_version").textContent = localVersion;
 
   // Get the details div
-  const infoDetails = document.getElementById('info_details');
+  const infoDetails = document.getElementById("info_details");
   infoDetails.open = false;
 
   // Check version
@@ -80,20 +80,17 @@ async function init() {
       infoDetails.open = true;
     }
   }
-
-  // Add menu
-  browser.menus.create({
-    id: 'open_options',
-    title: browser.i18n.getMessage("menuOpenSettings"),
-    icons: { '16': 'notification/images/ok-icon.svg' },
-    contexts: ['browser_action'],
-  });
 }
 
 init();
 
+// Settings page
 function mainopenOptionsPage() {
   browser.runtime.openOptionsPage();
 }
 
-document.querySelector("#open_settings_page").addEventListener("click", mainopenOptionsPage);
+document.getElementById("open_settings_page").addEventListener("click", mainopenOptionsPage);
+
+// Match info_table & footer_table to version_table
+document.getElementById("info_table").style.width = `${document.getElementById("version_table").offsetWidth}px`;
+document.getElementById("footer_table").style.width = `${document.getElementById("version_table").offsetWidth}px`;

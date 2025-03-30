@@ -19,41 +19,48 @@
 async function saveOptions(e) {
   e.preventDefault();
   await browser.storage.sync.set({
-    notiftype: document.querySelector("#notif-type").value
+    notiftype: document.getElementById("notif_type").value,
+    alarmtimer: document.getElementById("alarm_timer").value
   });
-  document.querySelector("#submit-button").disabled = 'disabled';
+  document.getElementById("submit_button").disabled = "disabled";
+  await ScheduleAlarm.update();
 }
 
 async function restoreOptions() {
   let res;
   try {
-    res = await browser.storage.managed.get('notiftype');
-    document.querySelector("#managed-options").style.display = 'block';
-    document.querySelector("#notif-type").disabled = 'disabled';
-    document.querySelector("#submit-button").disabled = 'disabled';
-    document.querySelector("#notif-type").value = res.notiftype;
+    res = await browser.storage.managed.get();
+    document.getElementById("managed_options").style.display = "block";
+    document.getElementById("notif_type").disabled = "disabled";
+    document.getElementById("alarm_timer").disabled = "disabled";
+    document.getElementById("notif_type").value = res.notiftype;
+    document.getElementById("alarm_timer").value = res.alarmtimer;
     await browser.storage.sync.set({
-      notiftype: res.notiftype
+      notiftype: res.notiftype,
+      alarmtimer: res.alarmtimer
     });
-  } catch (error) {
-    console.error(error);
+  } catch (e) {
+    this.error = e;
   }
-  if (typeof res === 'undefined') {
-    res = await browser.storage.sync.get('notiftype');
-    document.querySelector("#notif-type").value = res.notiftype || 'both';
+  if (typeof res === "undefined") {
+    res = await browser.storage.sync.get();
+    document.getElementById("notif_type").value = res.notiftype;
+    document.getElementById("alarm_timer").value = res.alarmtimer;
   }
   await optionsOnChange();
 }
 
 async function optionsOnChange() {
-  let res = await browser.storage.sync.get('notiftype');
-  if (document.querySelector("#notif-type").value === res.notiftype) {
-    document.querySelector("#submit-button").disabled = 'disabled';
+  const res = await browser.storage.sync.get();
+  if (document.getElementById("notif_type").value !== res.notiftype || document.getElementById("alarm_timer").value !== res.alarmtimer) {
+    document.getElementById("submit_button").disabled = "";
   } else {
-    document.querySelector("#submit-button").disabled = '';
+    document.getElementById("submit_button").disabled = "disabled";
   }
 }
 
-document.addEventListener('DOMContentLoaded', restoreOptions);
-document.querySelector("form").addEventListener("submit", saveOptions);
-document.querySelector("#notif-type").addEventListener("change", optionsOnChange);
+document.addEventListener("DOMContentLoaded", restoreOptions);
+document.getElementById("options_form").addEventListener("submit", saveOptions);
+document.getElementById("options_form").addEventListener("reset", optionsOnChange);
+document.getElementById("notif_type").addEventListener("change", optionsOnChange);
+document.getElementById("alarm_timer").addEventListener("change", optionsOnChange);

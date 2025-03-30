@@ -22,10 +22,20 @@
 
 const VersionChecker = {
   isUpToDate: async function() {
+    // Prepare timeout abort controller
+    const controller = new AbortController();
+    const timeoutPromise = new Promise((_, abort) => {
+      setTimeout(abort, 30000);
+    });
+
     // Catch potential errors when working with the Mozilla API
     try {
       // Fetch remote version info
-      const response = await fetch("https://gitlab.com/api/v4/projects/44042130/releases");
+      const url = "https://gitlab.com/api/v4/projects/44042130/releases";
+      const response = await Promise.race([
+        fetch(url, { signal: controller.signal }),
+        timeoutPromise
+      ]);
       const json = await response.json();
 
       // Prepare storage for the version information
@@ -35,10 +45,17 @@ const VersionChecker = {
 
       // Parse JSON response from the product details API
       this.remoteVersions["release"].push(json[0].tag_name);
-    }
-    catch(e) {
+    } catch(e) {
       this.error = e;
+      if (e.name === "AbortError") {
+        console.error("VersionChecker() fetch timed out", url);
+      } else {
+        console.error("VersionChecker() fetch failed:", e.message);
+      }
       return false;
+    } finally {
+      // Cleanup abort the controller
+      controller.abort();
     }
     this.error = false;
 

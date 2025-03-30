@@ -2,7 +2,24 @@ div {
   margin: 25px;
 }
 
-#managed-options {
+#managed_options {
   display: none;
   background-color: #FF0000;
+}
+
+table, th, td {
+  border: 1px solid #383838;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 2px 6px 2px 6px;
+}
+
+.option {
+  text-align: center;
+}
+
+.optionbutton {
+  text-align: center;
 }

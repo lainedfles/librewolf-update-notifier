@@ -21,31 +21,46 @@
 */
 
 async function CheckForUpdates() {
+  console.debug("background CheckForUpdates(): checking for updates")
   if (! await VersionChecker.isUpToDate())
     OpenNotification(false);
 }
 
-browser.runtime.onStartup.addListener(CheckForUpdates);
-browser.runtime.onInstalled.addListener(CheckForUpdates);
+// Handle options
+async function init() {
+  const res = await browser.storage.sync.get();
+  if (typeof res.notiftype === "undefined" || typeof res.alarmtimer === "undefined") {
+    console.debug("background init(): setting default options");
+    await browser.storage.sync.set({
+      notiftype: "both",
+      alarmtimer: "720"
+    });
+  }
+  CheckForUpdates();
+  await ScheduleAlarm.update();
+}
 
+browser.runtime.onStartup.addListener(init);
+browser.runtime.onInstalled.addListener(init);
+
+// Notifications
 async function OpenNotification(clicked = true) {
   let res;
   try {
-    res = await browser.storage.managed.get('notiftype');
-  } catch (error) {
-    console.error(error);
+    res = await browser.storage.managed.get("notiftype");
+  } catch (e) {
+    this.error = e;
   }
-  if (typeof res === 'undefined') {
-    res = await browser.storage.sync.get('notiftype');
+  if (typeof res === "undefined") {
+    res = await browser.storage.sync.get("notiftype");
   }
-  if (res.notiftype === 'popup' || res.notiftype === 'both' || clicked !== false) {
+  if (res.notiftype === "popup" || res.notiftype === "both" || clicked !== false) {
     browser.tabs.create({
       active: true,
       url: browser.runtime.getURL("notification/message.html")
     });
   }
-  if ((res.notiftype === 'notif' || res.notiftype === 'both') && clicked == false) {
-    let title = browser.i18n.getMessage("extensionName");
+  if ((res.notiftype === "notif" || res.notiftype === "both") && clicked == false) {
     let msg = browser.i18n.getMessage("notificationContentWarn");
     let icon = browser.runtime.getURL("notification/images/warning-icon.svg");
     if (VersionChecker.error) {
@@ -55,13 +70,22 @@ async function OpenNotification(clicked = true) {
     browser.notifications.create({
       type: "basic",
       iconUrl: icon,
-      title: title,
+      title: browser.i18n.getMessage("extensionName"),
       message: msg
     });
   }
 }
 
 browser.browserAction.onClicked.addListener(OpenNotification);
+
+// Menus
+browser.menus.create({
+  id: "open_options",
+  title: browser.i18n.getMessage("menuOpenSettings"),
+  icons: { "16": "notification/images/ok-icon.svg" },
+  contexts: ["browser_action"],
+});
+
 browser.menus.onClicked.addListener((info) => {
   switch (info.menuItemId) {
     case "open_options":
@@ -78,9 +102,12 @@ function updateMenuItem(id, title) {
 }
 
 browser.menus.onShown.addListener((info) => {
-  let id = 'open_options'
+  const id = "open_options";
   if (!info.menuIds.includes(id)) {
     return;
   }
   updateMenuItem(id, browser.i18n.getMessage("menuOpenSettings"));
 });
+
+// Schedule alarm to poll for updates
+browser.alarms.onAlarm.addListener(CheckForUpdates);

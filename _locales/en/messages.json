@@ -36,8 +36,8 @@
     "description": "Warning text for managed-options enforcement"
   },
   "optionsNotifType": {
-    "message": "Notification Type",
-    "description": "Options Notification Type text"
+    "message": "Notification type",
+    "description": "Options Notification type text"
   },
   "optionsPopup": {
     "message": "Pop-up",
@@ -78,6 +78,30 @@
   "openOptionsPageLink": {
     "message": "⚙ Options",
     "description": "Open options page text"
+  },
+  "optionsAlarmTimer": {
+    "message": "Check for updates every",
+    "description": "Options Check for updates every text"
+  },
+  "options4Hours": {
+    "message": "4 Hours",
+    "description": "Options Alarm 4 Hours text"
+  },
+  "options8Hours": {
+    "message": "8 Hours",
+    "description": "Options Alarm 8 Hours text"
+  },
+  "options12Hours": {
+    "message": "12 hours",
+    "description": "Options Alarm 12 hours text"
+  },
+  "options24Hours": {
+    "message": "24 Hours",
+    "description": "Options Alarm 24 Hours text"
+  },
+  "optionsReset": {
+    "message": "Reset Defaults",
+    "description": "Options Reset Defaults button text"
   },
 
   "__WET_LOCALE__": { "message": "en" }

@@ -46,7 +46,7 @@
   },
   "optionsNotifType": {
     "message": "Bezeichnung",
-    "description": "Options Notification Type text",
+    "description": "Options Notification type text",
     "hash": "84f21868eaff68a1fa564d5d11ea4c31"
   },
   "optionsPopup": {
@@ -98,6 +98,36 @@
     "message": "⚙ Optionen",
     "description": "Open options page text",
     "hash": "08462bd395b4ff3b5bc19545dddb7cd1"
+  },
+  "optionsAlarmTimer": {
+    "message": "Überprüfen Sie alle Updates",
+    "description": "Options Check for updates every text",
+    "hash": "59f1dfadb7dccf42eadaf0ba0edb57e5"
+  },
+  "options4Hours": {
+    "message": "4 Stunden",
+    "description": "Options Alarm 4 Hours text",
+    "hash": "4a0c7fb97546cbac76fd9e86f879b29f"
+  },
+  "options8Hours": {
+    "message": "8 Stunden",
+    "description": "Options Alarm 8 Hours text",
+    "hash": "f189ea0653a0919cf021ebe3dd72ba22"
+  },
+  "options12Hours": {
+    "message": "12 stunden",
+    "description": "Options Alarm 12 hours text",
+    "hash": "39d3691793f58e2669767cab5e4c5e69"
+  },
+  "options24Hours": {
+    "message": "24 Stunden",
+    "description": "Options Alarm 24 Hours text",
+    "hash": "f8bda66757b048b975bfdeb3ba5aa75d"
+  },
+  "optionsReset": {
+    "message": "Default zurücksetzen",
+    "description": "Options Reset Defaults button text",
+    "hash": "1a5887eeed3cd8e9e25fe8eb5e3b580e"
   },
 
   "__WET_LOCALE__": { "message": "de" }

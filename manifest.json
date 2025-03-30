@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "__MSG_extensionName__",
-  "version": "1.0.5",
+  "version": "1.1.0",
 
   "description": "__MSG_extensionDescription__",
 
@@ -25,14 +25,20 @@
   "background": {
     "scripts": [
       "versionchecker.js",
-      "background.js"
+      "background.js",
+      "updatealarm.js"
     ],
     "persistent": false
   },
 
   "browser_action": {},
 
-  "permissions": ["storage", "menus", "notifications"],
+  "permissions": [
+    "storage",
+    "menus",
+    "notifications",
+    "alarms"
+  ],
 
   "options_ui": {
     "page": "options/options.html"
